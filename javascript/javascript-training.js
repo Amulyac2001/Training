@@ -1,43 +1,43 @@
-// console.log("Hello");
+console.log("Hello");
 
-// // callback:-
-// setTimeout(function(){
-//     console.log("Callback Function")
-// },3000);
+// callback:-
+setTimeout(function(){
+    console.log("Callback Function")
+},3000);
 
-// // promise:-
-// let checkEven=new Promise((resolve,reject)=>{
-//     let num=3;
-//     if(num%2==0){
-//         resolve("Even number");
-//     }
-//     else{
-//         reject("odd number");
-//     }
-// });
+// promise:-
+let checkEven=new Promise((resolve,reject)=>{
+    let num=3;
+    if(num%2==0){
+        resolve("Even number");
+    }
+    else{
+        reject("odd number");
+    }
+});
 
-// checkEven.then((m)=>{
-//     console.log(m)
-// })
-// .catch((err)=>{
-//     console.log(err);
-// })
+checkEven.then((m)=>{
+    console.log(m)
+})
+.catch((err)=>{
+    console.log(err);
+})
 
 
-// // async await:->
+// async await:->
 
-// const data=async function fetchdata(){
-//     try{
-//         const res=await fetch('https://jsonplaceholder.typicode.com/todos/1')
-//         const data=await res.json()
-//         console.log(data);
-//     }
-//     catch(err){
-//         console.log(err)
-//     }
-// };
+const data=async function fetchdata(){
+    try{
+        const res=await fetch('https://jsonplaceholder.typicode.com/todos/1')
+        const data=await res.json()
+        console.log(data);
+    }
+    catch(err){
+        console.log(err)
+    }
+};
 
-// data();
+data();
 
 
 import { sum,fun } from "./file.js";
