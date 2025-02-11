@@ -11,7 +11,8 @@ function Form() {
         e.preventDefault();
         if (!email || !password) {
             setError("Both fields are required!");
-        } else {
+        }
+        else {
             setError("");
             alert("Login successful!");
         }
@@ -22,7 +23,7 @@ function Form() {
             <div>
                 <input type="email" placeholder="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)} />
+                    onChange={(e)=>setEmail(e.target.value)} />
             </div>
             <div>
                 <input type="password" placeholder="password"
