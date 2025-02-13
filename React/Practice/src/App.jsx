@@ -10,6 +10,7 @@ import Footer from './components/Footer.jsx';
 // import HandleApi from './HandleApi.jsx';
 import ClassComponent from './classComponent.jsx';
 import ComponentLifecycle from './ComponentLifecycle.jsx'
+import ReactForm from './ReactForm.jsx';
 
 function App(){
   const [count,setCount]=useState(0);
@@ -32,6 +33,7 @@ function App(){
       {/* <ClassComponent /> */}
       {/* <Home /> */}
       {/* <ComponentLifecycle name="Amulya" /> */}
+      <ReactForm />
     </div>
   )
 }
