@@ -3,15 +3,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { addTodo, removeTodo } from "./actions";
 
 const TodoApp = () => {
-  const [input, setInput] = useState("");
-  const todos = useSelector((state) => state.todos);
-  const dispatch = useDispatch();
+  const[input,setInput]=useState("");
+  const todos=useSelector((state)=>state.todos);
+  const dispatch=useDispatch();
 
-  const handleAddTodo = () => {
+  const handleAddTodo=()=>{
       dispatch(addTodo(input));
-      setInput(""); // Clear input
-  };
-
+      setInput("");
+  }
   return (
     <div>
       <h2>Todo List</h2>
