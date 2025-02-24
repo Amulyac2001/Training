@@ -7,7 +7,7 @@ function ChestKeyFunctionality() {
     return (
         <>
             <div>
-                <h2 className='text-white'>Chest Keys</h2>
+                <h2 className='text-white pr-[950px] pb-[5px]'>Chest Keys</h2>
                 <div className="flex gap-4 overflow-x-auto">
                     {ChestKeyData.map((data) => (
                         <div key={data.id}>

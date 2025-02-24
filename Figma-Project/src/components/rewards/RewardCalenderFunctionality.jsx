@@ -6,8 +6,8 @@ function RewardCalenderFunctionality() {
     return (
         <>
             <div>
-                <h3 className='text-white'>Rewards Calender</h3>
-                <div className="flex gap-4 overflow-x-auto">
+                <h2 className='text-white pr-[750px]'>Rewards Calender</h2>
+                <div className="flex gap-4 overflow-x-auto pt-[-20px]">
                     {rewardCalenderData.map((data) => (
                         <Card key={data.id} img={data.img} title={data.title} btndata={data.btn} />
                     ))}

@@ -1,40 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import { rewardKeyData } from "../../components/constants/rewardKeyData";
 import Card from "../CardFunctionality/Card";
 import ChestKeyFunctionality from '../../components/rewards/ChestKeyFunctionality'
 
 const Scroll = () => {
-    const scrollContainerRef = useRef(null);
-    const scrollLeft = () => {
-        if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({ left: -200, behavior: "smooth" });
-        }
-    };
-    const scrollRight = () => {
-        if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({ left: 200, behavior: "smooth" });
-        }
-    };
-    return (
-        <div className="relative w-full">
-            <button
-                onClick={scrollLeft}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10  bg-gray-800 p-2 rounded-full shadow-md hover:bg-gray-700 transition"
-            >&lt;</button>
-            <button
-                onClick={scrollRight}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 p-2 rounded-full shadow-md hover:bg-gray-700 transition"
-            >&gt;</button>
-            <div 
-            ref={scrollContainerRef} 
-            className="flex gap-4 overflow-x-auto p-4 scrollbar-hide scroll-smooth"
-            >
-                <ChestKeyFunctionality />
-            </div>
-        </div>
+  const scroll = (direction) => {
+    const container = document.getElementById("scroll-container");
+    if (container) {
+      const scrollAmount = 300; // Adjust movement distance
+      container.scrollLeft += direction === "left" ? -scrollAmount : scrollAmount;
+    }
+  };
 
-    )
-}
+  return (
+    <div className="relative w-full max-w-5xl mx-auto p-4">
+      <button
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700"
+        onClick={() => scroll("left")}
+      >
+        &#9665;
+      </button>
+
+      {/* Scrollable Container */}
+      <div
+        id="scroll-container"
+        className="flex overflow-x-hidden scroll-smooth scrollbar-hide "
+      >
+       <ChestKeyFunctionality />
+      </div>
+
+      {/* Right Scroll Button */}
+      <button
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700"
+        onClick={() => scroll("right")}
+      >
+        &#9655;
+      </button>
+    </div>
+  );
+};
 
 export default Scroll;

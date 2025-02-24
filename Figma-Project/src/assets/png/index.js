@@ -12,6 +12,7 @@ import I11 from './I11.png'
 import I12 from './I12.png'
 import I13 from './I13.png'
 import I14 from './I14.png'
+import SideNav from './SideNav.png'
 
 export {
     I1,
@@ -27,5 +28,6 @@ export {
     I11,
     I12,
     I13,
-    I14
+    I14,
+    SideNav
 };

@@ -7,7 +7,7 @@ function RewardKeyFunctionality() {
     return (
         <>
             <div>
-                <h2 className='text-white'>Rewards Keys</h2>
+                <h2 className='text-white pr-[1190px]'>Rewards Keys</h2>
                 <div className="flex gap-4 overflow-x-auto ">
                     {rewardKeyData.map((data) => (
                         <div key={data.id}>
